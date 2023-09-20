@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+
+
+/* Normalizacion -> siempre recomendable hacer antes de empezar con el css de la pagina, para que la visual de la pagina este desde "cero" y seamos nosotros los que pongamos los estilos y no los que pone el navegador (user agent stylesheet) */
+
+/* 1ro quitamos el relleno de los margenes, los espaciados , aca lo hacemos todo junto en vez 
+de hacerlo uno por uno */
+
+
+
+
+*,
+*::before, 
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* se agrega esta propiedad para determinar como se comporta tanto los margenes como los rellenos que vayamos a utilizar en nuestros elementos*/
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%; /*el tamaño por defecto del parrafo del texto en el navegador es de 16px, aunque es una buena practica usar en nuestro sitios las um -> rem y em , este ultimo se recomienda particularmente para los textos, 1 em equivale a 16px, por lo tanto lo hackeamos para que 1em valga 10px (62.5%) -> entonces esto nos beneficia para sacar los calculos por ej. fz de parrafo 18px serian 1.8em */
+    color: #111111;/*le ponemos el color por defecto*/
+}
+
+a {
+    text-decoration: none; /* se quita el subrayado de los enlaces */
+    font-size: 2em; /*le modificamos el tamaño por defecto a los enlaces-> figma 20px (2em) */
+    font-family: inherit; /*esto es para que los enlaces que estan adentro de un header o footer van a tener raleway (header-footer) pero los que estan fuera de estos van a tener Inter (html)*/
+    color: inherit; /* aca le indicamos que siempre tome el color que viene heredado (en este caso el de html que pusimos, asi no cambia al azul que viene predefinido para enlaces. */
+}
+
+header,
+footer {
+    font-family: 'Raleway', sans-serif;
+    color: white;/* aca lo utilizamos segun diseño de figma, hack para no tener que estar cambiando el color del enlace cada vez que queremos uno distinto al elemento enlace, directamente esta dado por su padre*/
+}
+ul, ol {
+    list-style-type: none; /*para que no aparezca ningun simbolo ni numerado y podamos elegirlo eventualmente nosotros*/
+}
+
+p {
+    font-size: 1.8em; /*normalizamos un estilo estandar 18px (1.8em) */
+}
+
+.container {
+    max-width: 1200px;
+    margin: o auto;
+}
