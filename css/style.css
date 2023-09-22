@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
 
-/* Variable en CSS una variable es un valor que yo puedo alojar en una palabra clave y reutilizarla todas la veces que necesite ese valor*/
+/* variables de CSS */
 
-/* selector root es similar a la etiqueta html pero la utilizo para diferenciar que en en el selector de HTML uso estilos globales y en el selector ROOT uso variables */
-
-/* para declarar las variables siempre se empieza con -- y luego el nombre puede ser cualquier cosa que yo quiera escribir. gracias a las variables yo puedo reutilizarlas.*/
 :root {
     /* Palette Colors */
     --primary-solid:#FF3333;
@@ -31,7 +28,6 @@
     --alternative-font: 'Raleway', sans-serif; /*tipografia para dar un poco de contraste*/
 
     /* Font-sizes*/
-    /* siempre es una buena practica utilizar la unidad de medida em para todo lo que son mis fuentes 1em = 16px (acordarse que aca hackeamos esto en normalizacion y lo hicimos igual a 10px - 62.5%* - por lo tanto 46px serian 4.6em y asi con cada uno.*/
     --font-display: 4.6em; /*46px*/
     --font-jumbo: 3.8em; /*38px*/
     --font-xlarge: 3em; /*30px*/
@@ -41,8 +37,7 @@
     --font-xsmall: 1.4em; /*12px*/
 
     /* Spacings */ 
-    /*estos serian los espacios o rellenos que utilizaremos para distanciar los elementos.
-    1 rem = 10px = 1em; solo que el em en algunos escenarios puede dejar de valer 10px y el rem no, siempre va a valer lo que haga referencia al valor de aca.*/
+    /*estos serian los espacios o rellenos que utilizaremos para distanciar los elementos.*/
     --spacing-128: 12.8rem; 
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
@@ -55,45 +50,36 @@
 
 }
 
-
-/* Normalizacion -> siempre recomendable hacer antes de empezar con el css de la pagina, para que la visual de la pagina este desde "cero" y seamos nosotros los que pongamos los estilos y no los que pone el navegador (user agent stylesheet) */
-
-/* 1ro quitamos el relleno de los margenes, los espaciados , aca lo hacemos todo junto en vez 
-de hacerlo uno por uno */
-
+/* Normalizacion */
 
 *,
 *::before, 
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* se agrega esta propiedad para determinar como se comporta tanto los margenes como los rellenos que vayamos a utilizar en nuestros elementos*/
+    box-sizing: border-box; /*propiedad para determinar como se comporta tanto los margenes como los rellenos que vayamos a utilizar en nuestros elementos*/
 }
 
 html {
     font-family: var(--base-font);
-    /* font-family: 'Inter', sans-serif; */
-    font-size: 62.5%; /*el tamaño por defecto del parrafo del texto en el navegador es de 16px, aunque es una buena practica usar en nuestro sitios las um -> rem y em , este ultimo se recomienda particularmente para los textos, 1 em equivale a 16px, por lo tanto lo hackeamos para que 1em valga 10px (62.5%) -> entonces esto nos beneficia para sacar los calculos por ej. fz de parrafo 18px serian 1.8em */
-    /* color: #111111; le ponemos el color por defecto*/
+    font-size: 62.5%; /*tamaño por defecto del parrafo del texto en el navegador 16px (1em), aca lo hackeamos para que 1em valga 10px (62.5%) */
     color: var(--dark-solid);
 }
 
 a {
     text-decoration: none; /* se quita el subrayado de los enlaces */
-    font-size: 2em; /*le modificamos el tamaño por defecto a los enlaces-> figma 20px (2em) */
-    font-family: inherit; /*esto es para que los enlaces que estan adentro de un header o footer van a tener raleway (header-footer) pero los que estan fuera de estos van a tener Inter (html)*/
-    color: inherit; /* aca le indicamos que siempre tome el color que viene heredado (en este caso el de html que pusimos, asi no cambia al azul que viene predefinido para enlaces. */
+    font-size: 2em; /*modificamos el tamaño por defecto a los enlaces-> figma 20px (2em) */
+    font-family: inherit; /*para que los enlaces que estan adentro de un header o footer tengan font raleway (header-footer) pero los que estan fuera de estos van a tener font Inter (html)*/
+    color: inherit; /* para que siempre tome el color que viene heredado (en este caso el de html que pusimos, asi no cambia al azul que viene predefinido para enlaces. */
 }
 
 header,
 footer {
     font-family: var(--alternative-font);
-    /* font-family: 'Raleway', sans-serif; */
-    /* color: white*/  /* aca lo utilizamos segun diseño de figma, hack para no tener que estar cambiando el color del enlace cada vez que queremos uno distinto al elemento enlace, directamente esta dado por su padre*/
     color: var(--light-font-solid);
 }
 ul, ol {
-    list-style-type: none; /*para que no aparezca ningun simbolo ni numerado y podamos elegirlo eventualmente nosotros*/
+    list-style-type: none; /*para que no aparezca ningun simbolo o numerado y podamos elegirlo eventualmente nosotros*/
 }
 
 p {
@@ -104,3 +90,8 @@ p {
     max-width: 1200px;
     margin: o auto;
 }
+
+/* Estilos de CSS */
+
+/* Header */
+
