@@ -38,7 +38,7 @@
     --font-large: 2.4em; /*24px*/
     --font-medium: 1.8em; /*18px*/
     --font-small: 1.6em; /*16px*/
-    --font-xsmall: 1.2em; /*12px*/
+    --font-xsmall: 1.4em; /*12px*/
 
     /* Spacings */ 
     /*estos serian los espacios o rellenos que utilizaremos para distanciar los elementos.
@@ -47,6 +47,8 @@
     --spacing-68: 6.8rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
+    --spacing-24: 2.4rem;
+    --spacing-20: 2rem;
     --spacing-16: 1.6rem;
     --spacing-12: 1.2rem;
     --spacing-8: 0.8rem;
