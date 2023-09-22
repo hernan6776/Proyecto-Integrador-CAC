@@ -59,6 +59,7 @@
 /* 1ro quitamos el relleno de los margenes, los espaciados , aca lo hacemos todo junto en vez 
 de hacerlo uno por uno */
 
+
 *,
 *::before, 
 *::after {
