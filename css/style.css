@@ -68,7 +68,7 @@ html {
 
 a {
     text-decoration: none; /* se quita el subrayado de los enlaces */
-    font-size: 2em; /*modificamos el tamaño por defecto a los enlaces-> figma 20px (2em) */
+    /* font-size: 2em; modificamos el tamaño por defecto a los enlaces-> figma 20px (2em)  */
     font-family: inherit; /*para que los enlaces que estan adentro de un header o footer tengan font raleway (header-footer) pero los que estan fuera de estos van a tener font Inter (html)*/
     color: inherit; /* para que siempre tome el color que viene heredado (en este caso el de html que pusimos, asi no cambia al azul que viene predefinido para enlaces. */
 }
@@ -86,15 +86,47 @@ p {
     font-size: 1.8em; /*normalizamos un estilo estandar 18px (1.8em) */
 }
 
+img {
+    width: 100%;  /*significa que siempre va a tener el 100% del ancho de su contenedor padre.*/
+}
+
 .container {
     max-width: 1200px;
-    margin: o auto;
+    margin: 0 auto;
 }
 
 /* Estilos de CSS */
 
 /* Header */
 
+header {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36);
+}
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.navbar__logo {
+    max-width: 300px;
+}
 
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-20)
+}
+
+.navbar__link {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+}
+
+.navbar__link:hover {
+    background-color: var(--primary-900);
+}
