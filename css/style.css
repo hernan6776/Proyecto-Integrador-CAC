@@ -71,6 +71,7 @@ a {
     /* font-size: 2em; modificamos el tamaño por defecto a los enlaces-> figma 20px (2em)  */
     font-family: inherit; /*para que los enlaces que estan adentro de un header o footer tengan font raleway (header-footer) pero los que estan fuera de estos van a tener font Inter (html)*/
     color: inherit; /* para que siempre tome el color que viene heredado (en este caso el de html que pusimos, asi no cambia al azul que viene predefinido para enlaces. */
+    font-size: 1em; 
 }
 
 header,
@@ -94,6 +95,11 @@ img {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+img{
+    width: 100%;
+}   
+
 
 /* Estilos de CSS */
 
@@ -160,6 +166,7 @@ header {
 .submenu__link:hover {
     background-color: var(--primary-900);
 }
+
 
 /* HERO - BANNER - */
 
@@ -228,7 +235,6 @@ header {
     padding: var(--spacing-16) 0;
 }
 
-
 .collection:nth-child(2) .collection__cover {
     order: -1;
 }
@@ -261,7 +267,7 @@ header {
     padding: var(--spacing-16) var(--spacing-36);
     border-radius: 50px;
     font-weight: 500;
-    transition: background .3s ease-in-out;
+    /* transition: background .3s ease-in-out; */
 }
 
 .collection__link:hover {
@@ -289,6 +295,11 @@ iconify-icon {
     font-weight: 700;
 
 }
+
+.slider__items {
+    display: flex;
+    gap: var(--spacing-);
+} 
 
 .glide__arrow--left {
     left:0;
@@ -356,6 +367,7 @@ iconify-icon {
     font-weight: 700;
 }
 
+
 /* FOOTER */
 
 .footer {
@@ -369,12 +381,112 @@ iconify-icon {
 }
 
 
+
+
+/* ASIDE */         /* INCORPORACION */
+
+/* Estilos para el aside */
+
+.lateral-izq{
+    float: left;
+    padding: var(--spacing-20)
+    
+  }
+  
+  /* Estilos para el formulario y sus elementos */
+  form {
+    font-family: Arial, sans-serif;
+    width: 300px;
+  }
+  .form-titulo {
+   
+    font-size: var(--font-small);
+    font-weight: 800;
+  }
+
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+ 
+.campo__mini, .campo__maxi{
+    width: 80px;
+    
+  }
+
+
+  
+ label {
+    display:inline-block;
+    margin-right: 10px;
+
+  }
+
+/* ITEM */
+.collection__titulo-2 {
+    font-family: var(--alternative-font);
+    font-size: var(--font-medium);
+    font-weight: 600;
+}
+.card-item__precio-2{
+    font-size: var(--font-jumbo);
+    font-weight: 800;
+    
+}
+.container_cantidad{
+    display: flex;
+}
+.btn_cantidad{
+    display:inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: var(--dark-bg-solid);
+    color: var(--ligth-font-solid);
+    font-size:var(--font-small);
+    font-weight: 600;
+
+}
+.campo_cantidad{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+   
+
+}
+
+.btn_agregar{
+    display:inline-block;
+    background-color: var(--primary-solid);
+    padding: var(--spacing-12) var(--spacing-68);
+    font-size: var(--font-small);
+    color:var(--ligth-font-solid);
+    margin-left: 20px;
+    border: var(--secundary-900)
+
+}
+ 
+
+ 
+/* FIN ASIDE */     /* INCORPORACION */
+
+
+
+
+
 /* ANIMATIONS */
+
 @keyframes fade {
     0% {
-        opacity: 0;
+            opacity: 0;
     }
     100% {
-        opacity: 1;
+            opacity: 1;
     }
 }
+
